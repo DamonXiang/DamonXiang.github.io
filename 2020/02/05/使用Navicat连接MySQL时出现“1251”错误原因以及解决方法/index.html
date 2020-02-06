@@ -7,19 +7,19 @@
   
   <title>使用Navicat连接MySQL时出现“1251”错误原因以及解决方法 | Mr.X’s blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="使用Navicat连接MySQL时报错： 报错原因：网上查资料发现是MySQL8.0 之前的版本中加密规则是mysql_native_password,在MySQL8.0版本之后,加密规则是caching_sha2_password。然而Navicat对应的加密规则是8.0之前的，所以会报错。     解决问题方法： 升级Navicat (因为是使用的破解版，比较麻烦) 还原MySQL的加密规则为">
+  <meta name="description" content="使用Navicat连接MySQL时报错：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用Navicat连接MySQL时出现“1251”错误原因以及解决方法">
 <meta property="og:url" content="http://yoursite.com/2020/02/05/%E4%BD%BF%E7%94%A8Navicat%E8%BF%9E%E6%8E%A5MySQL%E6%97%B6%E5%87%BA%E7%8E%B0%E2%80%9C1251%E2%80%9D%E9%94%99%E8%AF%AF%E5%8E%9F%E5%9B%A0%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="Mr.X’s blogs">
-<meta property="og:description" content="使用Navicat连接MySQL时报错： 报错原因：网上查资料发现是MySQL8.0 之前的版本中加密规则是mysql_native_password,在MySQL8.0版本之后,加密规则是caching_sha2_password。然而Navicat对应的加密规则是8.0之前的，所以会报错。     解决问题方法： 升级Navicat (因为是使用的破解版，比较麻烦) 还原MySQL的加密规则为">
+<meta property="og:description" content="使用Navicat连接MySQL时报错：">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190715125034568.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70#pic_center">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190715132452459.png?x-ossprocess=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70#pic_center">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190715132826717.png?x-ossprocess=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70#pic_center">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190715133200447.png?x-ossprocess=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70#pic_center">
 <meta property="article:published_time" content="2020-02-05T07:52:29.000Z">
-<meta property="article:modified_time" content="2020-02-05T07:55:54.203Z">
+<meta property="article:modified_time" content="2020-02-05T07:58:34.974Z">
 <meta property="article:author" content="Mr.X">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190715125034568.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70#pic_center">
@@ -94,6 +94,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="使用Navicat连接MySQL时报错："><a href="#使用Navicat连接MySQL时报错：" class="headerlink" title="使用Navicat连接MySQL时报错："></a>使用Navicat连接MySQL时报错：</h1><p><img src="https://img-blog.csdnimg.cn/20190715125034568.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70#pic_center" alt="报错详情界面"></p>
+<a id="more"></a>
+
 <h2 id="报错原因："><a href="#报错原因：" class="headerlink" title="报错原因："></a>报错原因：</h2><p>网上查资料发现是MySQL8.0 之前的版本中加密规则是mysql_native_password,在MySQL8.0版本之后,加密规则是caching_sha2_password。然而Navicat对应的加密规则是8.0之前的，所以会报错。   </p>
 <hr>
 <h2 id="解决问题方法："><a href="#解决问题方法：" class="headerlink" title="解决问题方法："></a>解决问题方法：</h2><ol>
@@ -124,7 +126,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/05/%E4%BD%BF%E7%94%A8Navicat%E8%BF%9E%E6%8E%A5MySQL%E6%97%B6%E5%87%BA%E7%8E%B0%E2%80%9C1251%E2%80%9D%E9%94%99%E8%AF%AF%E5%8E%9F%E5%9B%A0%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" data-id="ck690q2gy0005lwue52ao1vj4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/05/%E4%BD%BF%E7%94%A8Navicat%E8%BF%9E%E6%8E%A5MySQL%E6%97%B6%E5%87%BA%E7%8E%B0%E2%80%9C1251%E2%80%9D%E9%94%99%E8%AF%AF%E5%8E%9F%E5%9B%A0%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" data-id="ck6aodoi50004gsue79d9gffk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -196,6 +198,10 @@
       <ul>
         
           <li>
+            <a href="/2020/02/06/Hexo-yilia%E4%B8%BB%E9%A2%98%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/">Hexo yilia主题使用问题总结</a>
+          </li>
+        
+          <li>
             <a href="/2020/02/05/Eclipse%E5%AE%89%E8%A3%85JavaEE%E6%8F%92%E4%BB%B6-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%A6%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81/">Eclipse安装JavaEE插件,手把手教学！！！！</a>
           </li>
         
@@ -209,10 +215,6 @@
         
           <li>
             <a href="/2020/02/04/MarkdownTest/">Markdown测试</a>
-          </li>
-        
-          <li>
-            <a href="/2020/02/04/hello-world/">Hello World</a>
           </li>
         
       </ul>

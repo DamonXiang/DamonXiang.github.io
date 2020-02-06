@@ -15,7 +15,7 @@
 <meta property="og:description" content="MySQL8.0以上版本使用以下方式连接时会报错： 12Class.forName(&quot;com.mysql.jdbc.Driver&quot;);Connection connection &#x3D; DriverManager.getConnection(&quot;jdbc:mysql:&#x2F;&#x2F;localhost:3306&#x2F;testjdbc&quot;, &amp;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-02-05T07:53:41.000Z">
-<meta property="article:modified_time" content="2020-02-05T07:55:37.037Z">
+<meta property="article:modified_time" content="2020-02-05T07:58:15.094Z">
 <meta property="article:author" content="Mr.X">
 <meta name="twitter:card" content="summary">
   
@@ -90,6 +90,8 @@
       
         <p><strong>MySQL8.0以上版本使用以下方式连接时会报错：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</span><br><span class="line">Connection connection &#x3D; DriverManager.getConnection(&quot;jdbc:mysql:&#x2F;&#x2F;localhost:3306&#x2F;testjdbc&quot;, &quot;root&quot;, &quot;123456&quot;);</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+
 <p><strong>报错信息:</strong></p>
 <figure class="highlight plain"><figcaption><span>class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is 'com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java.sql.SQLException: The server time zone value &#39;?й???????&#39; is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.</span><br></pre></td></tr></table></figure>
 <p>意思是说原来的驱动器被废弃了，建议使用新驱动器：<code>com.mysql.cj.jdbc.Driver</code><br>以及需要设置数据库服务器的时区。</p>
@@ -104,7 +106,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/05/Java%E8%BF%9E%E6%8E%A5MySQL%E6%95%B0%E6%8D%AE%E5%BA%938.0%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%AC%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98/" data-id="ck690q2go0001lwue9pedhmch" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/05/Java%E8%BF%9E%E6%8E%A5MySQL%E6%95%B0%E6%8D%AE%E5%BA%938.0%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%AC%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98/" data-id="ck6aodoi20002gsue5snlddsn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -176,6 +178,10 @@
       <ul>
         
           <li>
+            <a href="/2020/02/06/Hexo-yilia%E4%B8%BB%E9%A2%98%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/">Hexo yilia主题使用问题总结</a>
+          </li>
+        
+          <li>
             <a href="/2020/02/05/Eclipse%E5%AE%89%E8%A3%85JavaEE%E6%8F%92%E4%BB%B6-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%A6%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81/">Eclipse安装JavaEE插件,手把手教学！！！！</a>
           </li>
         
@@ -189,10 +195,6 @@
         
           <li>
             <a href="/2020/02/04/MarkdownTest/">Markdown测试</a>
-          </li>
-        
-          <li>
-            <a href="/2020/02/04/hello-world/">Hello World</a>
           </li>
         
       </ul>
