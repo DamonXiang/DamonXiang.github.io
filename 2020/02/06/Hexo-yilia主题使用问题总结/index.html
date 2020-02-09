@@ -26,8 +26,10 @@
 <meta property="og:image" content="http://q5bt5gtqa.bkt.clouddn.com/20200208221358.png">
 <meta property="og:image" content="http://q5bt5gtqa.bkt.clouddn.com/20200208221448.png">
 <meta property="og:image" content="http://q5bt5gtqa.bkt.clouddn.com/20200209130006.png">
+<meta property="og:image" content="http://q5bt5gtqa.bkt.clouddn.com/20200209135710.png">
+<meta property="og:image" content="http://q5bt5gtqa.bkt.clouddn.com/20200209140555.png">
 <meta property="article:published_time" content="2020-02-06T10:59:09.000Z">
-<meta property="article:modified_time" content="2020-02-09T05:24:00.878Z">
+<meta property="article:modified_time" content="2020-02-09T06:12:17.954Z">
 <meta property="article:author" content="Mr.X">
 <meta property="article:tag" content="置顶">
 <meta name="twitter:card" content="summary">
@@ -248,7 +250,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># livere 来必力。将 false 改为自己的uid则启用该评论系统。</span><br><span class="line">livere_uid: false</span><br></pre></td></tr></table></figure>
 <p>在<code>themes\yilia\layout\_partial\post</code>中新建文件livere.ejs文件，代码如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 来必力City版安装代码 --&gt;</span><br><span class="line">&lt;div id&#x3D;&quot;lv-container&quot; data-id&#x3D;&quot;city&quot; data-uid&#x3D;&quot;&lt;%&#x3D;theme.livere_uid%&gt;&quot;&gt;</span><br><span class="line">	&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">   (function(d, s) &#123;</span><br><span class="line">       var j, e &#x3D; d.getElementsByTagName(s)[0];</span><br><span class="line"></span><br><span class="line">       if (typeof LivereTower &#x3D;&#x3D;&#x3D; &#39;function&#39;) &#123; return; &#125;</span><br><span class="line"></span><br><span class="line">       j &#x3D; d.createElement(s);</span><br><span class="line">       j.src &#x3D; &#39;https:&#x2F;&#x2F;cdn-city.livere.com&#x2F;js&#x2F;embed.dist.js&#39;;</span><br><span class="line">       j.async &#x3D; true;</span><br><span class="line"></span><br><span class="line">       e.parentNode.insertBefore(j, e);</span><br><span class="line">   &#125;)(document, &#39;script&#39;);</span><br><span class="line">	&lt;&#x2F;script&gt;</span><br><span class="line">&lt;noscript&gt; 为正常使用来必力评论功能请激活JavaScript&lt;&#x2F;noscript&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&lt;!-- City版安装代码已完成 --&gt;</span><br></pre></td></tr></table></figure>
-<p>最后修改<code>layout/_partial/article.ejs</code>文件</p>
+<p>然后在<code>layout/_partial/article.ejs</code>文件的任意一个评论代码后加入来必力的代码即可：<br><img src="http://q5bt5gtqa.bkt.clouddn.com/20200209135710.png" alt=""><br>最后修改主题配置文件中<code>livere_uid</code>的值为自己来比力账号的uid即可！</p>
+<p>效果图：<br><img src="http://q5bt5gtqa.bkt.clouddn.com/20200209140555.png" alt=""><br>有时会出现加载不出来的情况，可能因为来必力是韩国的🙃。</p>
 <h1 id="8、添加字数统计及阅读时长"><a href="#8、添加字数统计及阅读时长" class="headerlink" title="8、添加字数统计及阅读时长"></a>8、添加字数统计及阅读时长</h1><h1 id="9、添加版权申明"><a href="#9、添加版权申明" class="headerlink" title="9、添加版权申明"></a>9、添加版权申明</h1><p>在<code>themes/yilia/layout/_partial/article.ejs</code>文件如下位置：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- post.content %&gt;</span><br><span class="line">	&lt;% &#125; %&gt;</span><br><span class="line">	&lt;-- 在此处添加代码--&gt;</span><br><span class="line">	&lt;% if ((theme.reward_type &#x3D;&#x3D;&#x3D; 2 || (theme.reward_type &#x3D;&#x3D;&#x3D; 1 &amp;&amp; post.reward)) &amp;&amp; !index)&#123; %&gt;</span><br></pre></td></tr></table></figure>
 <p>添加以下代码：</p>
@@ -383,7 +386,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://damonxiang.github.io/2020/02/06/Hexo-yilia%E4%B8%BB%E9%A2%98%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://damonxiang.github.iothub.io/2020/02/06/Hexo-yilia%E4%B8%BB%E9%A2%98%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/" alt="微信分享二维码">
     </div>
 </div>
 
