@@ -25,8 +25,9 @@
 <meta property="og:image" content="http://q5bt5gtqa.bkt.clouddn.com/20200207214757.png">
 <meta property="og:image" content="http://q5bt5gtqa.bkt.clouddn.com/20200208221358.png">
 <meta property="og:image" content="http://q5bt5gtqa.bkt.clouddn.com/20200208221448.png">
+<meta property="og:image" content="http://q5bt5gtqa.bkt.clouddn.com/20200209130006.png">
 <meta property="article:published_time" content="2020-02-06T10:59:09.000Z">
-<meta property="article:modified_time" content="2020-02-07T10:59:09.000Z">
+<meta property="article:modified_time" content="2020-02-09T05:24:00.878Z">
 <meta property="article:author" content="Mr.X">
 <meta property="article:tag" content="置顶">
 <meta name="twitter:card" content="summary">
@@ -243,13 +244,17 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--显示阅读次数--&gt;</span><br><span class="line">&lt;% if (!index &amp;&amp; post.comments)&#123; %&gt;</span><br><span class="line">  &lt;br&#x2F;&gt;</span><br><span class="line">  &lt;a class&#x3D;&quot;cloud-tie-join-count&quot; href&#x3D;&quot;javascript:void(0);&quot; style&#x3D;&quot;color:gray;font-size:14px;&quot;&gt;</span><br><span class="line">  &lt;span class&#x3D;&quot;icon-sort&quot;&gt;&lt;&#x2F;span&gt;</span><br><span class="line">  &lt;span id&#x3D;&quot;busuanzi_container_page_pv&quot; style&#x3D;&quot;color:#ef7522;font-size:14px;&quot;&gt;</span><br><span class="line">            阅读数: &lt;span id&#x3D;&quot;busuanzi_value_page_pv&quot;&gt;&lt;&#x2F;span&gt;次 &amp;nbsp;&amp;nbsp;</span><br><span class="line">  &lt;&#x2F;span&gt;</span><br><span class="line">  &lt;&#x2F;a&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br><span class="line">&lt;!--显示阅读次数完毕--&gt;</span><br></pre></td></tr></table></figure>
 <p>效果图：</p>
 <p><img src="http://q5bt5gtqa.bkt.clouddn.com/20200208221358.png" alt=""><br><img src="http://q5bt5gtqa.bkt.clouddn.com/20200208221448.png" alt=""></p>
-<h1 id="7、添加评论系统"><a href="#7、添加评论系统" class="headerlink" title="7、添加评论系统"></a>7、添加评论系统</h1><p>此处使用的是<a href="https://livere.com/" target="_blank" rel="noopener">来必力</a>（也有推荐使用<a href="https://github.com/litten/hexo-theme-yilia/pull/646" target="_blank" rel="noopener">Valine</a>）</p>
+<h1 id="7、添加评论系统"><a href="#7、添加评论系统" class="headerlink" title="7、添加评论系统"></a>7、添加评论系统</h1><p>此处使用的是<a href="https://livere.com/" target="_blank" rel="noopener">来必力</a>（也有推荐使用<a href="https://github.com/litten/hexo-theme-yilia/pull/646" target="_blank" rel="noopener">Valine</a>）<br>去官网注册后登录，点击管理页面，安装city版本。然后填入相关信息，最后获取一般网站代码，记下data-uid：<br><img src="http://q5bt5gtqa.bkt.clouddn.com/20200209130006.png" alt=""><br>在yilia配置文件中添加如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># livere 来必力。将 false 改为自己的uid则启用该评论系统。</span><br><span class="line">livere_uid: false</span><br></pre></td></tr></table></figure>
+<p>在<code>themes\yilia\layout\_partial\post</code>中新建文件livere.ejs文件，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 来必力City版安装代码 --&gt;</span><br><span class="line">&lt;div id&#x3D;&quot;lv-container&quot; data-id&#x3D;&quot;city&quot; data-uid&#x3D;&quot;&lt;%&#x3D;theme.livere_uid%&gt;&quot;&gt;</span><br><span class="line">	&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">   (function(d, s) &#123;</span><br><span class="line">       var j, e &#x3D; d.getElementsByTagName(s)[0];</span><br><span class="line"></span><br><span class="line">       if (typeof LivereTower &#x3D;&#x3D;&#x3D; &#39;function&#39;) &#123; return; &#125;</span><br><span class="line"></span><br><span class="line">       j &#x3D; d.createElement(s);</span><br><span class="line">       j.src &#x3D; &#39;https:&#x2F;&#x2F;cdn-city.livere.com&#x2F;js&#x2F;embed.dist.js&#39;;</span><br><span class="line">       j.async &#x3D; true;</span><br><span class="line"></span><br><span class="line">       e.parentNode.insertBefore(j, e);</span><br><span class="line">   &#125;)(document, &#39;script&#39;);</span><br><span class="line">	&lt;&#x2F;script&gt;</span><br><span class="line">&lt;noscript&gt; 为正常使用来必力评论功能请激活JavaScript&lt;&#x2F;noscript&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&lt;!-- City版安装代码已完成 --&gt;</span><br></pre></td></tr></table></figure>
+<p>最后修改<code>layout/_partial/article.ejs</code>文件</p>
 <h1 id="8、添加字数统计及阅读时长"><a href="#8、添加字数统计及阅读时长" class="headerlink" title="8、添加字数统计及阅读时长"></a>8、添加字数统计及阅读时长</h1><h1 id="9、添加版权申明"><a href="#9、添加版权申明" class="headerlink" title="9、添加版权申明"></a>9、添加版权申明</h1><p>在<code>themes/yilia/layout/_partial/article.ejs</code>文件如下位置：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- post.content %&gt;</span><br><span class="line">	&lt;% &#125; %&gt;</span><br><span class="line">	&lt;-- 在此处添加代码--&gt;</span><br><span class="line">	&lt;% if ((theme.reward_type &#x3D;&#x3D;&#x3D; 2 || (theme.reward_type &#x3D;&#x3D;&#x3D; 1 &amp;&amp; post.reward)) &amp;&amp; !index)&#123; %&gt;</span><br></pre></td></tr></table></figure>
 <p>添加以下代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 添加版权声明 --&gt;</span><br><span class="line">&lt;% if(theme.declare)&#123;%&gt;</span><br><span class="line">    &lt;%- partial(&#39;post&#x2F;declare&#39;) %&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
 <p>然后在<code>yilia/source/main.0cf68a.css</code>中添加样式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*版权声明的样式*&#x2F;</span><br><span class="line">.declare &#123;</span><br><span class="line">  background-color: #eaeaea;</span><br><span class="line">  margin-top: 2em;</span><br><span class="line">  border-left: 3px solid #ff1700;</span><br><span class="line">  padding: .5em 1em; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.declare &#123;</span><br><span class="line">  background-color: #eaeaea;</span><br><span class="line">  margin-top: 2em;</span><br><span class="line">  border-left: 3px solid #ff1700;</span><br><span class="line">  padding: .5em 1em; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>新建<code>themes\yilia\layout\_partial\post\declare.ejs</code>:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;%</span><br><span class="line">  var sUrl &#x3D; url.replace(&#x2F;index\.html$&#x2F;, &#39;&#39;);</span><br><span class="line">  sUrl &#x3D; &#x2F;^(http:|https:)\&#x2F;\&#x2F;&#x2F;.test(sUrl) ? sUrl : &#39;https:&#39; + sUrl;</span><br><span class="line">%&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- #版权基础设定：0-关闭声明； 1-文章对应的md文件里有declare: true属性，才有版权声明； 2-所有文章均有版权声明 --&gt;</span><br><span class="line">&lt;% if ((theme.declare.declare_type &#x3D;&#x3D;&#x3D; 2 || (theme.declare.declare_type &#x3D;&#x3D;&#x3D; 1 &amp;&amp; post.declare)) &amp;&amp; !index)&#123; %&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;declare&quot;&gt;</span><br><span class="line">    &lt;strong class&#x3D;&quot;author&quot;&gt;本文作者：&lt;&#x2F;strong&gt;</span><br><span class="line">    &lt;% if(config.author !&#x3D; undefined)&#123; %&gt;</span><br><span class="line">      &lt;%&#x3D; config.author%&gt;</span><br><span class="line">    &lt;% &#125;else&#123;%&gt;</span><br><span class="line">      &lt;font color&#x3D;&quot;red&quot;&gt;请在博客根目录“_config.yml”中填入正确的“author”&lt;&#x2F;font&gt;</span><br><span class="line">    &lt;%&#125;%&gt;</span><br><span class="line">    &lt;br&gt;</span><br><span class="line">    &lt;strong class&#x3D;&quot;create-time&quot;&gt;发布时间：&lt;&#x2F;strong&gt;</span><br><span class="line">    &lt;%- date(post.date, &#39;YYYY-MM-DD&#39;) %&gt;</span><br><span class="line">    &lt;br&gt;</span><br><span class="line">    &lt;strong class&#x3D;&quot;update-time&quot;&gt;最后更新：&lt;&#x2F;strong&gt;</span><br><span class="line">    &lt;%- date(post.updated, &#39;YYYY-MM-DD&#39;) %&gt;</span><br><span class="line">    &lt;br&gt;</span><br><span class="line">    &lt;strong class&#x3D;&quot;article-titles&quot;&gt;本文标题：&lt;&#x2F;strong&gt;</span><br><span class="line">    &lt;a href&#x3D;&quot;&lt;%&#x3D; config.url %&gt;&#x2F;&lt;%&#x3D; post.path %&gt;&quot; title&#x3D;&quot;&lt;%&#x3D; post.title %&gt;&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;%&#x3D; post.title %&gt;&lt;&#x2F;a&gt;</span><br><span class="line">    &lt;br&gt;</span><br><span class="line">    &lt;strong class&#x3D;&quot;article-url&quot;&gt;本文链接：&lt;&#x2F;strong&gt;</span><br><span class="line">    &lt;a href&#x3D;&quot;&lt;%&#x3D; config.url %&gt;&#x2F;&lt;%&#x3D; post.path %&gt;&quot; title&#x3D;&quot;&lt;%&#x3D; post.title %&gt;&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;%&#x3D; config.url %&gt;&#x2F;&lt;%&#x3D; post.path %&gt;&lt;&#x2F;a&gt;</span><br><span class="line">    &lt;br&gt;</span><br><span class="line">    &lt;strong class&#x3D;&quot;copyright&quot;&gt;版权声明：&lt;&#x2F;strong&gt;</span><br><span class="line">    本作品采用</span><br><span class="line">    &lt;a rel&#x3D;&quot;license&quot; href&#x3D;&quot;&lt;%&#x3D; theme.declare.licensee_url%&gt;&quot; title&#x3D;&quot;&lt;%&#x3D; theme.declare.licensee_alias %&gt;&quot;&gt;&lt;%&#x3D; theme.declare.licensee_name%&gt;&lt;&#x2F;a&gt;</span><br><span class="line">    许可协议进行许可。转载请注明出处！</span><br><span class="line">    &lt;% if(theme.declare.licensee_img !&#x3D; undefined)&#123; %&gt;</span><br><span class="line">      &lt;br&gt;</span><br><span class="line">      &lt;a rel&#x3D;&quot;license&quot; href&#x3D;&quot;&lt;%&#x3D; theme.declare.licensee_url%&gt;&quot;&gt;&lt;img alt&#x3D;&quot;知识共享许可协议&quot; style&#x3D;&quot;border-width:0&quot; src&#x3D;&quot;&lt;%&#x3D; theme.declare.licensee_img%&gt;&quot;&#x2F;&gt;&lt;&#x2F;a&gt;</span><br><span class="line">    &lt;% &#125; %&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;% &#125; else &#123;%&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;declare&quot; hidden&#x3D;&quot;hidden&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
 
@@ -274,7 +279,7 @@
     2020-02-06
     <br>
     <strong class="update-time">最后更新：</strong>
-    2020-02-07
+    2020-02-09
     <br>
     <strong class="article-titles">本文标题：</strong>
     <a href="http://damonxiang.github.io/2020/02/06/Hexo-yilia主题使用问题总结/" title="Hexo yilia主题使用问题总结" target="_blank">Hexo yilia主题使用问题总结</a>
@@ -431,9 +436,29 @@
 </aside>
 
 
+  
+  
+  
 
   
-  
+    <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80ODU1Ni8yNTA1MA==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
   
 
   
@@ -535,11 +560,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">置顶</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">置顶</a>
               </li>
             
             <div class="clearfix"></div>
