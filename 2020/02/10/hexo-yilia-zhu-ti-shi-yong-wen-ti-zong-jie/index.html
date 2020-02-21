@@ -1,0 +1,1204 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Hexo-yilia主题使用问题总结, Mr.X’s blog">
+    <meta name="description" content="利用hexo搭建好博客后，就可以自己设置主题了。常用的主题里yilia算是比较美观简洁的。于是开始倒腾yilia。在网上也找到了许多相关的教程但是都不够集中，甚至有一些小问题（某个博主的教程甚至导致我的主题配置文件损坏~~~只好重新配置）。于是自己进行一下小总结。">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Hexo-yilia主题使用问题总结 | Mr.X’s blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    
+    <script src="/libs/jquery/jquery.min.js"></script>
+    
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper head-container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Mr.X’s blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Mr.X’s blog</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Hexo-yilia主题使用问题总结</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Hexo/">
+                                <span class="chip bg-color">Hexo</span>
+                            </a>
+                        
+                            <a href="/tags/yilia/">
+                                <span class="chip bg-color">yilia</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/blog/" class="post-category">
+                                blog
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-02-10
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2020-02-21
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.9k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    8 分
+                </div>
+                
+				
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+            
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>利用hexo搭建好博客后，就可以自己设置主题了。常用的主题里yilia算是比较美观简洁的。于是开始倒腾yilia。在网上也找到了许多相关的教程但是都不够集中，甚至有一些小问题（某个博主的教程甚至导致我的主题配置文件损坏<del>~</del>只好重新配置）。于是自己进行一下小总结。</p>
+<p><a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">附hexo配置文件说明文档</a></p>
+<p>关于yilia主题下载问题，一般不会出错。速度慢是因为github上不去。<br><img src="http://q5bt5gtqa.bkt.clouddn.com/%E4%B8%8B%E8%BD%BDyilia.png" alt="下载yilia过程"></p>
+<p>下载完成后，将博客文件夹下的配置文件_config.yml里的theme值修改为yilia即可：</p>
+<p><img src="http://q5bt5gtqa.bkt.clouddn.com/yilia.png" alt="修改theme值"></p>
+<p>然后执行一系列hexo clean，hexo g，hexo s发布到本地就行，后文中省略此步骤。  </p>
+<h1 id="1、修改图片资源"><a href="#1、修改图片资源" class="headerlink" title="1、修改图片资源"></a>1、修改图片资源</h1><ul>
+<li><p>在路径themes\yilia\source下新建图片资源文件夹assets用来存放图片资源文件。</p>
+</li>
+<li><p>配置文件_config.yml中直接引用即可。（此配置文件为yilia主题的配置文件路径为themes\yilia_config.yml）</p>
+</li>
+<li><p>需要显示的就不用注释掉，不需要显示的就用“#”注释掉。(详细的图片位置在配置文件中有相应的注释)</p>
+<p><img src="http://q5bt5gtqa.bkt.clouddn.com/20200207182614.png" alt="">  </p>
+</li>
+</ul>
+<h1 id="2、显示文章摘要"><a href="#2、显示文章摘要" class="headerlink" title="2、显示文章摘要"></a>2、显示文章摘要</h1><p>在Markdown格式的文章中插入:<code>&lt;!--more--&gt;</code>即可，只会显示它之前的文章，后面的内容不显示。同时注释掉yilia主题配置文件中的：</p>
+<pre class="line-numbers language-yml"><code class="language-yml"># excerpt_link: more<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>避免同时出现“more”和“展开全文”，如图：<br><img src="http://q5bt5gtqa.bkt.clouddn.com/20200207211423.png" alt="">  </p>
+<h1 id="3、显示文章目录"><a href="#3、显示文章目录" class="headerlink" title="3、显示文章目录"></a>3、显示文章目录</h1><p>修改yilia主题配置文件中<code>toc:2</code>即可<br><img src="http://q5bt5gtqa.bkt.clouddn.com/20200207212636.png" alt="">  </p>
+<h1 id="4、添加归档菜单"><a href="#4、添加归档菜单" class="headerlink" title="4、添加归档菜单"></a>4、添加归档菜单</h1><p>修改yilia主题配置文件：</p>
+<pre class="line-numbers language-yml"><code class="language-yml">menu:
+  主页: /
+  随笔: /tags/随笔/
+  归档: /archives/index.html <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>同时想在文章下添加小标签直接在tag栏填入相应的标签即可，如图：<br><img src="http://q5bt5gtqa.bkt.clouddn.com/20200207213455.png" alt="">  </p>
+<h1 id="5、修改代码快背景颜色和字体颜色"><a href="#5、修改代码快背景颜色和字体颜色" class="headerlink" title="5、修改代码快背景颜色和字体颜色"></a>5、修改代码快背景颜色和字体颜色</h1><p>网上的常用方法有两种，此处推荐直接修改编译好的文件，路径为：themes\yilia\source\main.ocf68a.css</p>
+<ul>
+<li>修改代码块背景色，搜索<code>.article-entry .highlight</code>修改此处十六进制颜色码即可。</li>
+</ul>
+<p><img src="http://q5bt5gtqa.bkt.clouddn.com/20200207214432.png" alt=""></p>
+<ul>
+<li>修改代码块字体颜色，搜索<code>.article-entry .highlight .line</code>同样修改此处十六进制颜色码即可。</li>
+</ul>
+<p><img src="http://q5bt5gtqa.bkt.clouddn.com/20200207214757.png" alt=""></p>
+<h1 id="6、添加不蒜子统计"><a href="#6、添加不蒜子统计" class="headerlink" title="6、添加不蒜子统计"></a>6、添加不蒜子统计</h1><h2 id="6-1安装不蒜子脚本"><a href="#6-1安装不蒜子脚本" class="headerlink" title="6.1安装不蒜子脚本"></a>6.1安装不蒜子脚本</h2><p>不蒜子可用来统计博客的访问量在<code>themes\yilia\layout\_partial\after-footer.ejs</code>文件最后添加：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token operator">&lt;</span>script  <span class="token keyword">async</span>  src<span class="token operator">=</span><span class="token string">"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="6-2添加统计网站访问量"><a href="#6-2添加统计网站访问量" class="headerlink" title="6.2添加统计网站访问量"></a>6.2添加统计网站访问量</h2><p>在<code>themes\yilia\layout\_partial\footer.ejs</code>中添加：</p>
+<pre class="line-numbers language-js"><code class="language-js"># PV方式，单个用户连续点击 n 篇，记录 n 次记录值
+<span class="token operator">&lt;</span>span id<span class="token operator">=</span><span class="token string">"busuanzi_container_site_pv"</span><span class="token operator">></span>    本站总访问量<span class="token operator">&lt;</span>span id<span class="token operator">=</span><span class="token string">"busuanzi_value_site_pv"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span>次<span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span>
+
+# UV方式，单个用户连续点击 n 篇，记录 <span class="token number">1</span> 次记录值
+<span class="token operator">&lt;</span>span id<span class="token operator">=</span><span class="token string">"busuanzi_container_site_uv"</span><span class="token operator">></span>  本站访客数<span class="token operator">&lt;</span>span id<span class="token operator">=</span><span class="token string">"busuanzi_value_site_uv"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span>人次<span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="6-3单篇文章点击量"><a href="#6-3单篇文章点击量" class="headerlink" title="6.3单篇文章点击量"></a>6.3单篇文章点击量</h2><p>在<code>themes/yilia/layout/_partial/article.ejs</code>中</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'post/title'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>class_name<span class="token punctuation">:</span> <span class="token string">'article-title'</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>后面添加如下代码：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>显示阅读次数<span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>index <span class="token operator">&amp;&amp;</span> post<span class="token punctuation">.</span>comments<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>br<span class="token operator">/</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>a <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"cloud-tie-join-count"</span> href<span class="token operator">=</span><span class="token string">"javascript:void(0);"</span> style<span class="token operator">=</span><span class="token string">"color:gray;font-size:14px;"</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>span <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"icon-sort"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span>
+  <span class="token operator">&lt;</span>span id<span class="token operator">=</span><span class="token string">"busuanzi_container_page_pv"</span> style<span class="token operator">=</span><span class="token string">"color:#ef7522;font-size:14px;"</span><span class="token operator">></span>
+            阅读数<span class="token punctuation">:</span> <span class="token operator">&lt;</span>span id<span class="token operator">=</span><span class="token string">"busuanzi_value_page_pv"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span>次 <span class="token operator">&amp;</span>nbsp<span class="token punctuation">;</span><span class="token operator">&amp;</span>nbsp<span class="token punctuation">;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>显示阅读次数完毕<span class="token operator">--</span><span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>效果图：</p>
+<p><img src="http://q5bt5gtqa.bkt.clouddn.com/20200208221358.png" alt=""><br><img src="http://q5bt5gtqa.bkt.clouddn.com/20200208221448.png" alt=""></p>
+<h1 id="7、添加评论系统"><a href="#7、添加评论系统" class="headerlink" title="7、添加评论系统"></a>7、添加评论系统</h1><p>此处使用的是<a href="https://livere.com/" target="_blank" rel="noopener">来必力</a>（也有推荐使用<a href="https://github.com/litten/hexo-theme-yilia/pull/646" target="_blank" rel="noopener">Valine</a>）<br>去官网注册后登录，点击管理页面，安装city版本。然后填入相关信息，最后获取一般网站代码，记下data-uid：<br><img src="http://q5bt5gtqa.bkt.clouddn.com/20200209130006.png" alt=""><br>在yilia配置文件中添加如下代码：</p>
+<pre class="line-numbers language-yml"><code class="language-yml"># livere 来必力。将 false 改为自己的uid则启用该评论系统。
+livere_uid: false<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>在<code>themes\yilia\layout\_partial\post</code>中新建文件livere.ejs文件，代码如下：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 来必力City版安装代码 <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"lv-container"</span> data<span class="token operator">-</span>id<span class="token operator">=</span><span class="token string">"city"</span> data<span class="token operator">-</span>uid<span class="token operator">=</span><span class="token string">"&lt;%=theme.livere_uid%>"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">></span>
+   <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>d<span class="token punctuation">,</span> s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       <span class="token keyword">var</span> j<span class="token punctuation">,</span> e <span class="token operator">=</span> d<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+       <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> LivereTower <span class="token operator">===</span> <span class="token string">'function'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+       j <span class="token operator">=</span> d<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+       j<span class="token punctuation">.</span>src <span class="token operator">=</span> <span class="token string">'https://cdn-city.livere.com/js/embed.dist.js'</span><span class="token punctuation">;</span>
+       j<span class="token punctuation">.</span><span class="token keyword">async</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+
+       e<span class="token punctuation">.</span>parentNode<span class="token punctuation">.</span><span class="token function">insertBefore</span><span class="token punctuation">(</span>j<span class="token punctuation">,</span> e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>document<span class="token punctuation">,</span> <span class="token string">'script'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span class="token operator">&lt;</span>noscript<span class="token operator">></span> 为正常使用来必力评论功能请激活JavaScript<span class="token operator">&lt;</span><span class="token operator">/</span>noscript<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> City版安装代码已完成 <span class="token operator">--</span><span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>然后在<code>layout/_partial/article.ejs</code>文件的任意一个评论代码后加入来必力的代码即可：<br><img src="http://q5bt5gtqa.bkt.clouddn.com/20200209135710.png" alt=""><br>最后修改主题配置文件中<code>livere_uid</code>的值为自己来比力账号的uid即可！</p>
+<p>效果图：<br><img src="http://q5bt5gtqa.bkt.clouddn.com/20200209140555.png" alt=""><br>有时会出现加载不出来的情况，可能因为来必力是韩国的🙃。</p>
+<h1 id="8、添加字数统计及阅读时长"><a href="#8、添加字数统计及阅读时长" class="headerlink" title="8、添加字数统计及阅读时长"></a>8、添加字数统计及阅读时长</h1><p>安装失败：<br><img src="http://q5bt5gtqa.bkt.clouddn.com/20200209152510.png" alt=""></p>
+<h1 id="9、解决微信分享问题"><a href="#9、解决微信分享问题" class="headerlink" title="9、解决微信分享问题"></a>9、解决微信分享问题</h1><p>初始配置下微信分享有异常：</p>
+<p><img src="http://q5bt5gtqa.bkt.clouddn.com/20200209152836.png" alt=""></p>
+<p>解决办法：<br>将<code>themes\yilia\layout\_partial\post\share.ejs</code>文件中的</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//pan.baidu.com/share/qrcode?url=</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>修改为：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data=</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>接着在share.ejs文件中</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">var</span> sUrl <span class="token operator">=</span> url<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/index\.html$/</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  sUrl <span class="token operator">=</span> <span class="token regex">/^(http:|https:)\/\//</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>sUrl<span class="token punctuation">)</span> <span class="token operator">?</span> sUrl <span class="token punctuation">:</span> <span class="token string">'http:'</span> <span class="token operator">+</span> sUrl<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>后面加上一行代码（“20”由自己博客网址的长度计算得到）</p>
+<pre class="line-numbers language-js"><code class="language-js">test<span class="token operator">=</span>sUrl<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>将上一步中的：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token string">'//api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data='</span> <span class="token operator">+</span> sUrl<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>改成：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token string">'//api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data=你的主页网址'</span> <span class="token operator">+</span> test<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>最后效果：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"page-modal wx-share js-wx-box"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>a <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"close js-modal-close"</span> href<span class="token operator">=</span><span class="token string">"javascript:;"</span><span class="token operator">></span><span class="token operator">&lt;</span>i <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"icon icon-close"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>i<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
+    <span class="token operator">&lt;</span>p<span class="token operator">></span>扫一扫，分享到微信<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"wx-qrcode"</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>img src<span class="token operator">=</span>"<span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token string">'qrcode'</span> <span class="token keyword">in</span> locals <span class="token operator">?</span> <span class="token function">qrcode</span><span class="token punctuation">(</span>sUrl<span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token string">'//api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data=https://damonxiang.github.io'</span> <span class="token operator">+</span> test  <span class="token operator">%</span><span class="token operator">></span><span class="token string">" alt="</span>微信分享二维码"<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="10、主页左侧显示文章总数"><a href="#10、主页左侧显示文章总数" class="headerlink" title="10、主页左侧显示文章总数"></a>10、主页左侧显示文章总数</h1><p>在<code>themes\yilia\layout_partial\left-col.ejs</code>文件</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>header-menu<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">for</span> <span class="token attr-name">(var</span> <span class="token attr-name">i</span> <span class="token attr-name">in</span> <span class="token attr-name">theme.menu){</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&lt;%- url_for(theme.menu[i]) %<span class="token punctuation">></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>&lt;%= i %><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%}%</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>后面加上</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span><span class="token punctuation">></span></span>
+    总文章数 &lt;%=site.posts.length%>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>效果：</p>
+<p><img src="http://q5bt5gtqa.bkt.clouddn.com/20200209155447.png" alt=""></p>
+<h1 id="11、添加版权申明"><a href="#11、添加版权申明" class="headerlink" title="11、添加版权申明"></a>11、添加版权申明</h1><p>新建<code>themes\yilia\layout\_partial\post\declare.ejs</code>：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token operator">&lt;</span><span class="token operator">%</span>
+  <span class="token keyword">var</span> sUrl <span class="token operator">=</span> url<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/index\.html$/</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  sUrl <span class="token operator">=</span> <span class="token regex">/^(http:|https:)\/\//</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>sUrl<span class="token punctuation">)</span> <span class="token operator">?</span> sUrl <span class="token punctuation">:</span> <span class="token string">'https:'</span> <span class="token operator">+</span> sUrl<span class="token punctuation">;</span>
+<span class="token operator">%</span><span class="token operator">></span>
+
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> #版权基础设定：<span class="token number">0</span><span class="token operator">-</span>关闭声明； <span class="token number">1</span><span class="token operator">-</span>文章对应的md文件里有declare<span class="token punctuation">:</span> <span class="token boolean">true</span>属性，才有版权声明； <span class="token number">2</span><span class="token operator">-</span>所有文章均有版权声明 <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>theme<span class="token punctuation">.</span>declare<span class="token punctuation">.</span>declare_type <span class="token operator">===</span> <span class="token number">2</span> <span class="token operator">||</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>declare<span class="token punctuation">.</span>declare_type <span class="token operator">===</span> <span class="token number">1</span> <span class="token operator">&amp;&amp;</span> post<span class="token punctuation">.</span>declare<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>index<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"declare"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>strong <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"author"</span><span class="token operator">></span>本文作者：<span class="token operator">&lt;</span><span class="token operator">/</span>strong<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span><span class="token punctuation">(</span>config<span class="token punctuation">.</span>author <span class="token operator">!=</span> undefined<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> config<span class="token punctuation">.</span>author<span class="token operator">%</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span><span class="token operator">%</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>font color<span class="token operator">=</span><span class="token string">"red"</span><span class="token operator">></span>请在博客根目录“_config<span class="token punctuation">.</span>yml”中填入正确的“author”<span class="token operator">&lt;</span><span class="token operator">/</span>font<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token punctuation">}</span><span class="token operator">%</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>br<span class="token operator">></span>
+    <span class="token operator">&lt;</span>strong <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"create-time"</span><span class="token operator">></span>发布时间：<span class="token operator">&lt;</span><span class="token operator">/</span>strong<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">date</span><span class="token punctuation">(</span>post<span class="token punctuation">.</span>date<span class="token punctuation">,</span> <span class="token string">'YYYY-MM-DD'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>br<span class="token operator">></span>
+    <span class="token operator">&lt;</span>strong <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"update-time"</span><span class="token operator">></span>最后更新：<span class="token operator">&lt;</span><span class="token operator">/</span>strong<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">date</span><span class="token punctuation">(</span>post<span class="token punctuation">.</span>updated<span class="token punctuation">,</span> <span class="token string">'YYYY-MM-DD'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>br<span class="token operator">></span>
+    <span class="token operator">&lt;</span>strong <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"article-titles"</span><span class="token operator">></span>本文标题：<span class="token operator">&lt;</span><span class="token operator">/</span>strong<span class="token operator">></span>
+    <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"&lt;%= config.url %>/&lt;%= post.path %>"</span> title<span class="token operator">=</span><span class="token string">"&lt;%= post.title %>"</span> target<span class="token operator">=</span><span class="token string">"_blank"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> post<span class="token punctuation">.</span>title <span class="token operator">%</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
+    <span class="token operator">&lt;</span>br<span class="token operator">></span>
+    <span class="token operator">&lt;</span>strong <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"article-url"</span><span class="token operator">></span>本文链接：<span class="token operator">&lt;</span><span class="token operator">/</span>strong<span class="token operator">></span>
+    <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"&lt;%= config.url %>/&lt;%= post.path %>"</span> title<span class="token operator">=</span><span class="token string">"&lt;%= post.title %>"</span> target<span class="token operator">=</span><span class="token string">"_blank"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> config<span class="token punctuation">.</span>url <span class="token operator">%</span><span class="token operator">></span><span class="token operator">/</span><span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> post<span class="token punctuation">.</span>path <span class="token operator">%</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
+    <span class="token operator">&lt;</span>br<span class="token operator">></span>
+    <span class="token operator">&lt;</span>strong <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"copyright"</span><span class="token operator">></span>版权声明：<span class="token operator">&lt;</span><span class="token operator">/</span>strong<span class="token operator">></span>
+    本作品采用
+    <span class="token operator">&lt;</span>a rel<span class="token operator">=</span><span class="token string">"license"</span> href<span class="token operator">=</span><span class="token string">"&lt;%= theme.declare.licensee_url%>"</span> title<span class="token operator">=</span><span class="token string">"&lt;%= theme.declare.licensee_alias %>"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> theme<span class="token punctuation">.</span>declare<span class="token punctuation">.</span>licensee_name<span class="token operator">%</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
+    许可协议进行许可。转载请注明出处！
+    <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span><span class="token punctuation">(</span>theme<span class="token punctuation">.</span>declare<span class="token punctuation">.</span>licensee_img <span class="token operator">!=</span> undefined<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>br<span class="token operator">></span>
+      <span class="token operator">&lt;</span>a rel<span class="token operator">=</span><span class="token string">"license"</span> href<span class="token operator">=</span><span class="token string">"&lt;%= theme.declare.licensee_url%>"</span><span class="token operator">></span><span class="token operator">&lt;</span>img alt<span class="token operator">=</span><span class="token string">"知识共享许可协议"</span> style<span class="token operator">=</span><span class="token string">"border-width:0"</span> src<span class="token operator">=</span><span class="token string">"&lt;%= theme.declare.licensee_img%>"</span><span class="token operator">/</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span><span class="token operator">%</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"declare"</span> hidden<span class="token operator">=</span><span class="token string">"hidden"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在<code>themes/yilia/layout/_partial/article.ejs</code>文件如下位置：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> post<span class="token punctuation">.</span>content <span class="token operator">%</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">--</span> 在此处添加代码<span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>theme<span class="token punctuation">.</span>reward_type <span class="token operator">===</span> <span class="token number">2</span> <span class="token operator">||</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>reward_type <span class="token operator">===</span> <span class="token number">1</span> <span class="token operator">&amp;&amp;</span> post<span class="token punctuation">.</span>reward<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>index<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>添加以下代码：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 添加版权声明 <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span><span class="token punctuation">(</span>theme<span class="token punctuation">.</span>declare<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token operator">%</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'post/declare'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>然后在<code>yilia/source/main.0cf68a.css</code>中添加样式：</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.declare</span> </span><span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#eaeaea</span><span class="token punctuation">;</span>
+  <span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">2</span>em<span class="token punctuation">;</span>
+  <span class="token property">border-left</span><span class="token punctuation">:</span> <span class="token number">3</span>px solid <span class="token hexcode">#ff1700</span><span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">.5</span>em <span class="token number">1</span>em<span class="token punctuation">;</span> 
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://damonxiang.github.io" rel="external nofollow noreferrer">Mr.X</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://damonxiang.github.io/2020/02/10/hexo-yilia-zhu-ti-shi-yong-wen-ti-zong-jie/">http://damonxiang.github.io/2020/02/10/hexo-yilia-zhu-ti-shi-yong-wen-ti-zong-jie/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="http://damonxiang.github.io" target="_blank">Mr.X</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Hexo/">
+                                    <span class="chip bg-color">Hexo</span>
+                                </a>
+                            
+                                <a href="/tags/yilia/">
+                                    <span class="chip bg-color">yilia</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+    <div class="livere-card card" data-aos="fade-up">
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" class="card-content" data-id="city" data-uid="MTAyMC80ODU1Ni8yNTA1MA==">
+        <script type="text/javascript">
+            (function (d, s) {
+                let j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') {
+                    return;
+                }
+
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript。</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
+</div>
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/02/10/hexo-yilia-zhu-ti-shi-yong-wen-ti-zong-jie/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Hexo-yilia主题使用问题总结">
+                        
+                        <span class="card-title">Hexo-yilia主题使用问题总结</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            利用hexo搭建好博客后，就可以自己设置主题了。常用的主题里yilia算是比较美观简洁的。于是开始倒腾yilia。在网上也找到了许多相关的教程但是都不够集中，甚至有一些小问题（某个博主的教程甚至导致我的主题配置文件损坏~~~只好重新配置）。于是自己进行一下小总结。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/blog/" class="post-category">
+                                    blog
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                    <a href="/tags/yilia/">
+                        <span class="chip bg-color">yilia</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/02/10/idea-zhong-h2-shu-ju-ku-chang-jian-wen-ti-ji-jie-jue-fang-an/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="IDEA中H2数据库常见问题及解决方案">
+                        
+                        <span class="card-title">IDEA中H2数据库常见问题及解决方案</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            在IDEA中使用H2数据库常见问题及解决方案简介：H2是一个开源的嵌入式数据库引擎，采用Java语言编写，不受平台的限制，同时H2提供了一个十分方便的web控制台用于操作和管理数据库内容。H2还提供兼容模式，可以兼容一些主流的数据库，因此采
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Mr.X
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/H2/">
+                        <span class="chip bg-color">H2</span>
+                    </a>
+                    
+                    <a href="/tags/DataBase/">
+                        <span class="chip bg-color">DataBase</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Mr.X’s blog<br />'
+            + '文章作者: Mr.X<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+    
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="http://damonxiang.github.io" target="_blank">Mr.X</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">3.4k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "1";
+                    var startDate = "1";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/damonxiang" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:545052197@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=545052197" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 545052197" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

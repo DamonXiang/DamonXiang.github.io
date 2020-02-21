@@ -4,11 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="使用Navicat连接MySQL时出现“1251”错误原因以及解决方法, Mr.X’s blogs">
+    <meta name="keywords" content="使用Navicat连接MySQL时出现“1251”错误使用Navicat连接MySQL时出现“1251”错误原因以及解决方法, Mr.X’s blog">
     <meta name="description" content="使用Navicat连接MySQL时报错：
-
-
-报错原因：网上查资料发现是MySQL8.0 之前的版本中加密规则是mysql_native_password,在MySQL8.0版本之后,加密规则是caching_sha2_password。然">
+报错原因：网上查资料发现是MySQL8.0 之前的版本中加密规则是mysql_native_password,在MySQL8.0版本之后,加密规则是caching_sha2_password。然而N">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>使用Navicat连接MySQL时出现“1251”错误原因以及解决方法 | Mr.X’s blogs</title>
+    <title>使用Navicat连接MySQL时出现“1251”错误使用Navicat连接MySQL时出现“1251”错误原因以及解决方法 | Mr.X’s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,7 +27,8 @@
     
     <script src="/libs/jquery/jquery.min.js"></script>
     
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -41,7 +40,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Mr.X’s blogs</span>
+                    <span class="logo-span">Mr.X’s blog</span>
                 </a>
             </div>
             
@@ -139,7 +138,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Mr.X’s blogs</div>
+        <div class="logo-name">Mr.X’s blog</div>
         <div class="logo-desc">
             
             Never really desperate, only the lost of the soul.
@@ -243,12 +242,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://img-blog.csdnimg.cn/20190715125034568.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70#pic_center')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">使用Navicat连接MySQL时出现“1251”错误原因以及解决方法</h1>
+                    <h1 class="description center-align post-title">使用Navicat连接MySQL时出现“1251”错误使用Navicat连接MySQL时出现“1251”错误原因以及解决方法</h1>
                 </div>
             </div>
         </div>
@@ -363,12 +362,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/MySQL/">
+                                <span class="chip bg-color">MySQL</span>
+                            </a>
+                        
+                            <a href="/tags/Navicat/">
+                                <span class="chip bg-color">Navicat</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" class="post-category">
+                                开发工具
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -384,14 +400,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-02-07
+                    2020-02-21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    351
+                    281
                 </div>
                 
 
@@ -414,35 +430,21 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="使用Navicat连接MySQL时报错："><a href="#使用Navicat连接MySQL时报错：" class="headerlink" title="使用Navicat连接MySQL时报错："></a>使用Navicat连接MySQL时报错：</h1><a id="more"></a>
-
-<p><img src="https://img-blog.csdnimg.cn/20190715125034568.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70#pic_center" alt="报错详情界面"></p>
+                <h1 id="使用Navicat连接MySQL时报错："><a href="#使用Navicat连接MySQL时报错：" class="headerlink" title="使用Navicat连接MySQL时报错："></a>使用Navicat连接MySQL时报错：</h1><p><img src="https://img-blog.csdnimg.cn/20190715125034568.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70#pic_center" alt="报错详情界面"></p>
 <h2 id="报错原因："><a href="#报错原因：" class="headerlink" title="报错原因："></a>报错原因：</h2><p>网上查资料发现是MySQL8.0 之前的版本中加密规则是mysql_native_password,在MySQL8.0版本之后,加密规则是caching_sha2_password。然而Navicat对应的加密规则是8.0之前的，所以会报错。   </p>
 <hr>
-<h2 id="解决问题方法："><a href="#解决问题方法：" class="headerlink" title="解决问题方法："></a>解决问题方法：</h2><ol>
+<h2 id="解决问题方法："><a href="#解决问题方法：" class="headerlink" title="解决问题方法："></a>解决问题方法：</h2><ul>
 <li>升级Navicat (因为是使用的破解版，比较麻烦)</li>
-<li>还原MySQL的加密规则为mysql_native_password</li>
-</ol>
-<h3 id="此处使用第二种方法"><a href="#此处使用第二种方法" class="headerlink" title="此处使用第二种方法"></a>此处使用第二种方法</h3><ol>
-<li><h4 id="添加MySQL环境变量（-若安装MySQL时已完成则跳过此步骤-）："><a href="#添加MySQL环境变量（-若安装MySQL时已完成则跳过此步骤-）：" class="headerlink" title="添加MySQL环境变量（==若安装MySQL时已完成则跳过此步骤==）："></a>添加MySQL环境变量（==若安装MySQL时已完成则跳过此步骤==）：</h4><pre><code>找到MySQL安装路径里面的bin目录（具体情况，具体分析）：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190715131644975.png#pic_center)</code></pre><p>桌面右键点击<strong>此电脑</strong>–&gt;<strong>属性</strong>–&gt;<strong>高级系统设置</strong>–&gt;<strong>环境变量</strong>–&gt;<strong>系统变量Path</strong>–&gt;<strong>编辑</strong>–&gt;<strong>新建</strong>–&gt;<strong>将刚才复制的bin路径添加进去即可完成</strong><br><img src="https://img-blog.csdnimg.cn/20190715132452459.png?x-ossprocess=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-</li>
-<li><h4 id="以管理员身份运行CMD："><a href="#以管理员身份运行CMD：" class="headerlink" title="以管理员身份运行CMD："></a>以管理员身份运行CMD：<img src="https://img-blog.csdnimg.cn/20190715132826717.png?x-ossprocess=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></h4></li>
-<li><h4 id="输入命令和密码："><a href="#输入命令和密码：" class="headerlink" title="输入命令和密码："></a>输入命令和密码：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20190715133200447.png?x-ossprocess=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-</li>
-<li><h4 id="依次输入以下命令："><a href="#依次输入以下命令：" class="headerlink" title="依次输入以下命令："></a>依次输入以下命令：</h4></li>
-</ol>
-<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use mysql;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &#39;你的密码&#39;;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure>
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190715134945307.png?x-ossprocess=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70#pic_center)
-==注意命令后面的分号==，密码自己随意更改，为了方便我自己设置的123456</code></pre><ol start="5">
-<li><h4 id="大功告成："><a href="#大功告成：" class="headerlink" title="大功告成："></a>大功告成：</h4><pre><code>![连接成功](https://img-blog.csdnimg.cn/20190715135128315.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70#pic_center)</code></pre></li>
-</ol>
+<li>还原MySQL的加密规则为mysql_native_password（此处使用本方法）<h3 id="1-添加MySQL环境变量（若安装MySQL时已完成则跳过此步骤）："><a href="#1-添加MySQL环境变量（若安装MySQL时已完成则跳过此步骤）：" class="headerlink" title="1. 添加MySQL环境变量（若安装MySQL时已完成则跳过此步骤）："></a>1. 添加MySQL环境变量（若安装MySQL时已完成则跳过此步骤）：</h3>找到MySQL安装路径里面的bin目录（具体情况，具体分析）：<br><img src="https://img-blog.csdnimg.cn/20190715131644975.png#pic_center" alt=""><br>桌面右键点击<strong>此电脑</strong>–&gt;<strong>属性</strong>–&gt;<strong>高级系统设置</strong>–&gt;<strong>环境变量</strong>–&gt;<strong>系统变量Path</strong>–&gt;<strong>编辑</strong>–&gt;<strong>新建</strong>–&gt;<strong>将刚才复制的bin路径添加进去即可完成</strong><br><img src="https://img-blog.csdnimg.cn/20190715132452459.png?x-ossprocess=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70#pic_center" alt=""></li>
+</ul>
+<h3 id="2-以管理员身份运行CMD："><a href="#2-以管理员身份运行CMD：" class="headerlink" title="2.以管理员身份运行CMD："></a>2.以管理员身份运行CMD：</h3><p> <img src="https://img-blog.csdnimg.cn/20190715132826717.png?x-ossprocess=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70#pic_center" alt=""></p>
+<h3 id="3-输入命令和密码："><a href="#3-输入命令和密码：" class="headerlink" title="3.输入命令和密码："></a>3.输入命令和密码：</h3><pre class="line-numbers language-bash"><code class="language-bash">mysql -u root -p<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="https://img-blog.csdnimg.cn/20190715133200447.png?x-ossprocess=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70#pic_center" alt=""></p>
+<h3 id="4-依次输入以下命令："><a href="#4-依次输入以下命令：" class="headerlink" title="4.依次输入以下命令："></a>4.依次输入以下命令：</h3><pre class="line-numbers language-bash"><code class="language-bash">use mysql<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash">ALTER USER <span class="token string">'root'</span>@<span class="token string">'localhost'</span> IDENTIFIED WITH mysql_native_password BY <span class="token string">'你的密码'</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash">FLUSH PRIVILEGES<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="https://img-blog.csdnimg.cn/20190715134945307.png?x-ossprocess=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70#pic_center" alt=""><br><em>注意命令后面的分号</em>，密码自己随意更改，为了方便我自己设置的123456</p>
+<h3 id="5-大功告成："><a href="#5-大功告成：" class="headerlink" title="5.大功告成："></a>5.大功告成：</h3><p><img src="https://img-blog.csdnimg.cn/20190715135128315.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70#pic_center" alt="连接成功"></p>
 
             </div>
             <hr/>
@@ -468,7 +470,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://damonxiang.github.io/2020/02/05/shi-yong-navicat-lian-jie-mysql-shi-chu-xian-1251-cuo-wu-yuan-yin-yi-ji-jie-jue-fang-fa/">http://damonxiang.github.io/2020/02/05/shi-yong-navicat-lian-jie-mysql-shi-chu-xian-1251-cuo-wu-yuan-yin-yi-ji-jie-jue-fang-fa/</a>
+                    <a href="http://damonxiang.github.io/2020/02/05/shi-yong-navicat-lian-jie-mysql-shi-chu-xian-1251-cuo-wu/">http://damonxiang.github.io/2020/02/05/shi-yong-navicat-lian-jie-mysql-shi-chu-xian-1251-cuo-wu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -505,7 +507,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/MySQL/">
+                                    <span class="chip bg-color">MySQL</span>
+                                </a>
+                            
+                                <a href="/tags/Navicat/">
+                                    <span class="chip bg-color">Navicat</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -583,7 +593,8 @@
                     <div class="summary block-with-text">
                         
                             MySQL8.0以上版本使用以下方式连接时会报错：
-12Class.forName(&quot;com.mysql.jdbc.Driver&quot;);Connection connection &#x3D; DriverManager.
+Class.forName("com.mysql.jdbc.Driver");
+Connection connection = DriverManager.getConnection("j
                         
                     </div>
                     <div class="publish-info">
@@ -597,6 +608,14 @@
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/MySQL/">
+                        <span class="chip bg-color">MySQL</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -621,8 +640,6 @@
                     <div class="summary block-with-text">
                         
                             测试一下Markdown语法博文显示效果
-
-
 1.这是一级标题二级标题三级标题2.分割线3.无序列表
 第一个
 第三个
@@ -641,7 +658,8 @@
 
 
 6.链接百度一下
-博客主
+博客主页
+
                         
                     </div>
                     <div class="publish-info">
@@ -650,8 +668,12 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Mr.X
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/MarkDown/" class="post-category">
+                                    MarkDown
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -659,8 +681,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                        <span class="chip bg-color">随笔</span>
+                    <a href="/tags/MarkDown/">
+                        <span class="chip bg-color">MarkDown</span>
+                    </a>
+                    
+                    <a href="/tags/Test/">
+                        <span class="chip bg-color">Test</span>
                     </a>
                     
                 </div>
@@ -701,7 +727,7 @@
 
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
-            + '来源: Mr.X’s blogs<br />'
+            + '来源: Mr.X’s blog<br />'
             + '文章作者: Mr.X<br />'
             + '文章链接: <a href="' + url + '">' + url + '</a><br />'
             + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
@@ -762,7 +788,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h1, h2, h3, h4'
         });
 
         // modify the toc link href to support Chinese.
@@ -774,7 +800,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 
@@ -847,7 +873,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3.8k</span>&nbsp;字
+                class="white-color">3.4k</span>&nbsp;字
             
             
             
