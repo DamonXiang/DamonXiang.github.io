@@ -4,9 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Eclipse安装JavaEE插件,手把手教学！！！！, Mr.X’s blog">
-    <meta name="description" content="Eclipse安装JavaEE插件（JavaWeb模块）1.打开Eclipse然后Help-&amp;gt;About Eclipse IDE 查看当前版本号：
-2.依次Help-&amp;gt;Install New Software在Work with">
+    <meta name="keywords" content="IDEA中H2数据库常见问题及解决方案, Mr.X’s blog">
+    <meta name="description" content="在IDEA中使用H2数据库常见问题及解决方案简介：H2是一个开源的嵌入式数据库引擎，采用Java语言编写，不受平台的限制，同时H2提供了一个十分方便的web控制台用于操作和管理数据库内容。H2还提供兼容模式，可以兼容一些主流的数据库，因此采">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Eclipse安装JavaEE插件,手把手教学！！！！ | Mr.X’s blog</title>
+    <title>IDEA中H2数据库常见问题及解决方案 | Mr.X’s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -26,6 +25,7 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
     
     <script src="/libs/jquery/jquery.min.js"></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     
 <meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
@@ -242,12 +242,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Eclipse安装JavaEE插件,手把手教学！！！！</h1>
+                    <h1 class="description center-align post-title">IDEA中H2数据库常见问题及解决方案</h1>
                 </div>
             </div>
         </div>
@@ -364,27 +364,18 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/JavaEE/">
-                                <span class="chip bg-color">JavaEE</span>
+                            <a href="/tags/H2/">
+                                <span class="chip bg-color">H2</span>
                             </a>
                         
-                            <a href="/tags/Eclipse/">
-                                <span class="chip bg-color">Eclipse</span>
+                            <a href="/tags/DataBase/">
+                                <span class="chip bg-color">DataBase</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Java/" class="post-category">
-                                Java
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -393,21 +384,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-05
+                    2020-02-10
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-02-21
+                    2020-02-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    84
+                    340
                 </div>
                 
 
@@ -430,9 +421,16 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Eclipse安装JavaEE插件（JavaWeb模块）"><a href="#Eclipse安装JavaEE插件（JavaWeb模块）" class="headerlink" title="Eclipse安装JavaEE插件（JavaWeb模块）"></a>Eclipse安装JavaEE插件（JavaWeb模块）</h1><h2 id="1-打开Eclipse然后Help-gt-About-Eclipse-IDE-查看当前版本号："><a href="#1-打开Eclipse然后Help-gt-About-Eclipse-IDE-查看当前版本号：" class="headerlink" title="1.打开Eclipse然后Help-&gt;About Eclipse IDE 查看当前版本号："></a>1.打开Eclipse然后Help-&gt;About Eclipse IDE 查看当前版本号：</h2><p><img src="https://img-blog.csdnimg.cn/20191224102728973.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70" alt="箭头所指即为版本号"></p>
-<h2 id="2-依次Help-gt-Install-New-Software"><a href="#2-依次Help-gt-Install-New-Software" class="headerlink" title="2.依次Help-&gt;Install New Software"></a>2.依次Help-&gt;Install New Software</h2><p>在Work with框中填入 <code>http://download.eclipse.org/releases/</code>+步骤一中的版本号,如下图，然后等待加载出内容，选择Web，XML,Java EE and OSGi……这一项，然后就是一直next即可：<br><img src="https://img-blog.csdnimg.cn/20191224103028404.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70" alt=""></p>
-<p><img src="https://img-blog.csdnimg.cn/20191224103133907.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70" alt=""></p>
+                <h2 id="在IDEA中使用H2数据库常见问题及解决方案"><a href="#在IDEA中使用H2数据库常见问题及解决方案" class="headerlink" title="在IDEA中使用H2数据库常见问题及解决方案"></a>在IDEA中使用H2数据库常见问题及解决方案</h2><p>简介：H2是一个开源的嵌入式数据库引擎，采用Java语言编写，不受平台的限制，同时H2提供了一个十分方便的web控制台用于操作和管理数据库内容。H2还提供兼容模式，可以兼容一些主流的数据库，因此采用H2作为开发期的数据库非常方便。</p>
+<p>同时H2数据库使用过程中的小问题也比较多，以下列举我所遇到的问题：</p>
+<ul>
+<li><h3 id="IDEA连接数据库用户名或密码错误："><a href="#IDEA连接数据库用户名或密码错误：" class="headerlink" title="IDEA连接数据库用户名或密码错误："></a>IDEA连接数据库用户名或密码错误：</h3><code>org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Wrong user name or password [28000-200]</code></li>
+</ul>
+<p>造成的原因是H2数据库在第一次连接时输入的用户名和密码就会对数据库进行设置，以后的用户名和密码都按照第一次输入的使用。如果忘记了第一次连接时输入的用户名或密码，推荐直接删库重建，在新建数据库时通过IDEA设置用户名和密码。如下图：<br><img src="http://q5bt5gtqa.bkt.clouddn.com/20200219123319.png" alt=""></p>
+<ul>
+<li><h3 id="IDEA连接H2数据库失败"><a href="#IDEA连接H2数据库失败" class="headerlink" title="IDEA连接H2数据库失败"></a>IDEA连接H2数据库失败</h3><img src="http://q5bt5gtqa.bkt.clouddn.com/20200219123450.png" alt=""></li>
+</ul>
+<p>造成原因是H2数据库仅支持一个连接，如果项目启动后想通过IDEA连接数据库必须先关闭项目。同理启动项目前，也得关闭IDEA对数据库的连接。</p>
 
             </div>
             <hr/>
@@ -458,7 +456,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://damonxiang.github.io/2020/02/05/eclipse-an-zhuang-javaee-cha-jian-shou-ba-shou-jiao-xue/">http://damonxiang.github.io/2020/02/05/eclipse-an-zhuang-javaee-cha-jian-shou-ba-shou-jiao-xue/</a>
+                    <a href="http://damonxiang.github.io/posts/e9af.html">http://damonxiang.github.io/posts/e9af.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -496,12 +494,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/JavaEE/">
-                                    <span class="chip bg-color">JavaEE</span>
+                                <a href="/tags/H2/">
+                                    <span class="chip bg-color">H2</span>
                                 </a>
                             
-                                <a href="/tags/Eclipse/">
-                                    <span class="chip bg-color">Eclipse</span>
+                                <a href="/tags/DataBase/">
+                                    <span class="chip bg-color">DataBase</span>
                                 </a>
                             
                         </div>
@@ -693,19 +691,19 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/02/10/idea-zhong-h2-shu-ju-ku-chang-jian-wen-ti-ji-jie-jue-fang-an/">
+                <a href="/posts/dd5c.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="IDEA中H2数据库常见问题及解决方案">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Hexo-yilia主题使用问题总结">
                         
-                        <span class="card-title">IDEA中H2数据库常见问题及解决方案</span>
+                        <span class="card-title">Hexo-yilia主题使用问题总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            在IDEA中使用H2数据库常见问题及解决方案简介：H2是一个开源的嵌入式数据库引擎，采用Java语言编写，不受平台的限制，同时H2提供了一个十分方便的web控制台用于操作和管理数据库内容。H2还提供兼容模式，可以兼容一些主流的数据库，因此采
+                            利用hexo搭建好博客后，就可以自己设置主题了。常用的主题里yilia算是比较美观简洁的。于是开始倒腾yilia。在网上也找到了许多相关的教程但是都不够集中，甚至有一些小问题（某个博主的教程甚至导致我的主题配置文件损坏~~~只好重新配置）。于是自己进行一下小总结。
                         
                     </div>
                     <div class="publish-info">
@@ -714,8 +712,12 @@
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Mr.X
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/blog/" class="post-category">
+                                    blog
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -723,12 +725,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/H2/">
-                        <span class="chip bg-color">H2</span>
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
                     </a>
                     
-                    <a href="/tags/DataBase/">
-                        <span class="chip bg-color">DataBase</span>
+                    <a href="/tags/yilia/">
+                        <span class="chip bg-color">yilia</span>
                     </a>
                     
                 </div>
@@ -742,21 +744,20 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/05/java-lian-jie-mysql-shu-ju-ku-8.0-yi-shang-ban-ben-chu-xian-de-wen-ti/">
+                <a href="/posts/45a7.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Java连接MySQL数据库8.0以上版本出现的问题">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Eclipse安装JavaEE插件,手把手教学！！！！">
                         
-                        <span class="card-title">Java连接MySQL数据库8.0以上版本出现的问题</span>
+                        <span class="card-title">Eclipse安装JavaEE插件,手把手教学！！！！</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            MySQL8.0以上版本使用以下方式连接时会报错：
-Class.forName("com.mysql.jdbc.Driver");
-Connection connection = DriverManager.getConnection("j
+                            Eclipse安装JavaEE插件（JavaWeb模块）1.打开Eclipse然后Help-&gt;About Eclipse IDE 查看当前版本号：
+2.依次Help-&gt;Install New Software在Work with
                         
                     </div>
                     <div class="publish-info">
@@ -765,8 +766,12 @@ Connection connection = DriverManager.getConnection("j
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Mr.X
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Java/" class="post-category">
+                                    Java
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -774,8 +779,12 @@ Connection connection = DriverManager.getConnection("j
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/MySQL/">
-                        <span class="chip bg-color">MySQL</span>
+                    <a href="/tags/JavaEE/">
+                        <span class="chip bg-color">JavaEE</span>
+                    </a>
+                    
+                    <a href="/tags/Eclipse/">
+                        <span class="chip bg-color">Eclipse</span>
                     </a>
                     
                 </div>
@@ -1143,7 +1152,8 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
-
+    <!--动态线条背景-->
+    <script type="text/javascript" color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
 </body>
 
 </html>

@@ -4,9 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="使用Navicat连接MySQL时出现“1251”错误使用Navicat连接MySQL时出现“1251”错误原因以及解决方法, Mr.X’s blog">
-    <meta name="description" content="使用Navicat连接MySQL时报错：
-报错原因：网上查资料发现是MySQL8.0 之前的版本中加密规则是mysql_native_password,在MySQL8.0版本之后,加密规则是caching_sha2_password。然而N">
+    <meta name="keywords" content="Java连接MySQL数据库8.0以上版本出现的问题, Mr.X’s blog">
+    <meta name="description" content="MySQL8.0以上版本使用以下方式连接时会报错：
+Class.forName(&#34;com.mysql.jdbc.Driver&#34;);
+Connection connection = DriverManager.getConnection(&#34;j">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>使用Navicat连接MySQL时出现“1251”错误使用Navicat连接MySQL时出现“1251”错误原因以及解决方法 | Mr.X’s blog</title>
+    <title>Java连接MySQL数据库8.0以上版本出现的问题 | Mr.X’s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -26,6 +27,7 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
     
     <script src="/libs/jquery/jquery.min.js"></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     
 <meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
@@ -242,12 +244,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://img-blog.csdnimg.cn/20190715125034568.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70#pic_center')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">使用Navicat连接MySQL时出现“1251”错误使用Navicat连接MySQL时出现“1251”错误原因以及解决方法</h1>
+                    <h1 class="description center-align post-title">Java连接MySQL数据库8.0以上版本出现的问题</h1>
                 </div>
             </div>
         </div>
@@ -368,23 +370,10 @@
                                 <span class="chip bg-color">MySQL</span>
                             </a>
                         
-                            <a href="/tags/Navicat/">
-                                <span class="chip bg-color">Navicat</span>
-                            </a>
-                        
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" class="post-category">
-                                开发工具
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -400,14 +389,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-02-21
+                    2020-02-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    281
+                    251
                 </div>
                 
 
@@ -430,21 +419,17 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="使用Navicat连接MySQL时报错："><a href="#使用Navicat连接MySQL时报错：" class="headerlink" title="使用Navicat连接MySQL时报错："></a>使用Navicat连接MySQL时报错：</h1><p><img src="https://img-blog.csdnimg.cn/20190715125034568.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70#pic_center" alt="报错详情界面"></p>
-<h2 id="报错原因："><a href="#报错原因：" class="headerlink" title="报错原因："></a>报错原因：</h2><p>网上查资料发现是MySQL8.0 之前的版本中加密规则是mysql_native_password,在MySQL8.0版本之后,加密规则是caching_sha2_password。然而Navicat对应的加密规则是8.0之前的，所以会报错。   </p>
-<hr>
-<h2 id="解决问题方法："><a href="#解决问题方法：" class="headerlink" title="解决问题方法："></a>解决问题方法：</h2><ul>
-<li>升级Navicat (因为是使用的破解版，比较麻烦)</li>
-<li>还原MySQL的加密规则为mysql_native_password（此处使用本方法）<h3 id="1-添加MySQL环境变量（若安装MySQL时已完成则跳过此步骤）："><a href="#1-添加MySQL环境变量（若安装MySQL时已完成则跳过此步骤）：" class="headerlink" title="1. 添加MySQL环境变量（若安装MySQL时已完成则跳过此步骤）："></a>1. 添加MySQL环境变量（若安装MySQL时已完成则跳过此步骤）：</h3>找到MySQL安装路径里面的bin目录（具体情况，具体分析）：<br><img src="https://img-blog.csdnimg.cn/20190715131644975.png#pic_center" alt=""><br>桌面右键点击<strong>此电脑</strong>–&gt;<strong>属性</strong>–&gt;<strong>高级系统设置</strong>–&gt;<strong>环境变量</strong>–&gt;<strong>系统变量Path</strong>–&gt;<strong>编辑</strong>–&gt;<strong>新建</strong>–&gt;<strong>将刚才复制的bin路径添加进去即可完成</strong><br><img src="https://img-blog.csdnimg.cn/20190715132452459.png?x-ossprocess=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70#pic_center" alt=""></li>
-</ul>
-<h3 id="2-以管理员身份运行CMD："><a href="#2-以管理员身份运行CMD：" class="headerlink" title="2.以管理员身份运行CMD："></a>2.以管理员身份运行CMD：</h3><p> <img src="https://img-blog.csdnimg.cn/20190715132826717.png?x-ossprocess=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70#pic_center" alt=""></p>
-<h3 id="3-输入命令和密码："><a href="#3-输入命令和密码：" class="headerlink" title="3.输入命令和密码："></a>3.输入命令和密码：</h3><pre class="line-numbers language-bash"><code class="language-bash">mysql -u root -p<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20190715133200447.png?x-ossprocess=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70#pic_center" alt=""></p>
-<h3 id="4-依次输入以下命令："><a href="#4-依次输入以下命令：" class="headerlink" title="4.依次输入以下命令："></a>4.依次输入以下命令：</h3><pre class="line-numbers language-bash"><code class="language-bash">use mysql<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-bash"><code class="language-bash">ALTER USER <span class="token string">'root'</span>@<span class="token string">'localhost'</span> IDENTIFIED WITH mysql_native_password BY <span class="token string">'你的密码'</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-bash"><code class="language-bash">FLUSH PRIVILEGES<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20190715134945307.png?x-ossprocess=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70#pic_center" alt=""><br><em>注意命令后面的分号</em>，密码自己随意更改，为了方便我自己设置的123456</p>
-<h3 id="5-大功告成："><a href="#5-大功告成：" class="headerlink" title="5.大功告成："></a>5.大功告成：</h3><p><img src="https://img-blog.csdnimg.cn/20190715135128315.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70#pic_center" alt="连接成功"></p>
+                <p><strong>MySQL8.0以上版本使用以下方式连接时会报错：</strong></p>
+<pre class="line-numbers language-java"><code class="language-java">Class<span class="token punctuation">.</span><span class="token function">forName</span><span class="token punctuation">(</span><span class="token string">"com.mysql.jdbc.Driver"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Connection connection <span class="token operator">=</span> DriverManager<span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token string">"jdbc:mysql://localhost:3306/testjdbc"</span><span class="token punctuation">,</span> <span class="token string">"root"</span><span class="token punctuation">,</span> <span class="token string">"123456"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><strong>报错信息:</strong><br><code>Loading class `com.mysql.jdbc.Driver&#39;. This is deprecated. The new driver class is &#39;com.mysql.cj.jdbc.Driver&#39;. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+java.sql.SQLException: The server time zone value &#39;?й???????&#39; is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.</code><br>意思是说原来的驱动器被废弃了，建议使用新驱动器：<code>com.mysql.cj.jdbc.Driver</code><br>以及需要设置数据库服务器的时区。</p>
+<p><strong>8.0以上版本连接时需要做如下修改:</strong></p>
+<pre class="line-numbers language-java"><code class="language-java">Class<span class="token punctuation">.</span><span class="token function">forName</span><span class="token punctuation">(</span><span class="token string">"com.mysql.cj.jdbc.Driver"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Connection connection <span class="token operator">=</span> DriverManager<span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token string">"jdbc:mysql://localhost:3306/testjdbc?useSSL=false&amp;serverTimezone=Asia/Shanghai"</span><span class="token punctuation">,</span> <span class="token string">"root"</span><span class="token punctuation">,</span> <span class="token string">"123456"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>注意：</p>
+<p><em>1.MySQL 8.0 以上版本不需要建立 SSL 连接的，需要显式关闭</em></p>
+<p><em>2.以及CST的设置要注意并不存在<code>Asia/Beijing</code></em></p>
 
             </div>
             <hr/>
@@ -470,7 +455,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://damonxiang.github.io/2020/02/05/shi-yong-navicat-lian-jie-mysql-shi-chu-xian-1251-cuo-wu/">http://damonxiang.github.io/2020/02/05/shi-yong-navicat-lian-jie-mysql-shi-chu-xian-1251-cuo-wu/</a>
+                    <a href="http://damonxiang.github.io/posts/fe8b.html">http://damonxiang.github.io/posts/fe8b.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -510,10 +495,6 @@
                             
                                 <a href="/tags/MySQL/">
                                     <span class="chip bg-color">MySQL</span>
-                                </a>
-                            
-                                <a href="/tags/Navicat/">
-                                    <span class="chip bg-color">Navicat</span>
                                 </a>
                             
                         </div>
@@ -705,21 +686,20 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/02/05/java-lian-jie-mysql-shu-ju-ku-8.0-yi-shang-ban-ben-chu-xian-de-wen-ti/">
+                <a href="/posts/45a7.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Java连接MySQL数据库8.0以上版本出现的问题">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Eclipse安装JavaEE插件,手把手教学！！！！">
                         
-                        <span class="card-title">Java连接MySQL数据库8.0以上版本出现的问题</span>
+                        <span class="card-title">Eclipse安装JavaEE插件,手把手教学！！！！</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            MySQL8.0以上版本使用以下方式连接时会报错：
-Class.forName("com.mysql.jdbc.Driver");
-Connection connection = DriverManager.getConnection("j
+                            Eclipse安装JavaEE插件（JavaWeb模块）1.打开Eclipse然后Help-&gt;About Eclipse IDE 查看当前版本号：
+2.依次Help-&gt;Install New Software在Work with
                         
                     </div>
                     <div class="publish-info">
@@ -728,8 +708,12 @@ Connection connection = DriverManager.getConnection("j
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Mr.X
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Java/" class="post-category">
+                                    Java
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -737,8 +721,12 @@ Connection connection = DriverManager.getConnection("j
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/MySQL/">
-                        <span class="chip bg-color">MySQL</span>
+                    <a href="/tags/JavaEE/">
+                        <span class="chip bg-color">JavaEE</span>
+                    </a>
+                    
+                    <a href="/tags/Eclipse/">
+                        <span class="chip bg-color">Eclipse</span>
                     </a>
                     
                 </div>
@@ -752,51 +740,31 @@ Connection connection = DriverManager.getConnection("j
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/04/markdowntest/">
+                <a href="/posts/6bb3.html">
                     <div class="card-image">
                         
+                        <img src="https://img-blog.csdnimg.cn/20190715125034568.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTM5OTgw,size_16,color_FFFFFF,t_70#pic_center" class="responsive-img" alt="使用Navicat连接MySQL时出现“1251”错误使用Navicat连接MySQL时出现“1251”错误原因以及解决方法">
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Markdown测试">
-                        
-                        <span class="card-title">Markdown测试</span>
+                        <span class="card-title">使用Navicat连接MySQL时出现“1251”错误使用Navicat连接MySQL时出现“1251”错误原因以及解决方法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            测试一下Markdown语法博文显示效果
-1.这是一级标题二级标题三级标题2.分割线3.无序列表
-第一个
-第三个
-第二个 
-
-
-4.有序列表
-第一个
-第二个
-第三个
-
-
-5.引用
-这是一句引用
-这是第二句话
-
-
-6.链接百度一下
-博客主页
-
+                            使用Navicat连接MySQL时报错：
+报错原因：网上查资料发现是MySQL8.0 之前的版本中加密规则是mysql_native_password,在MySQL8.0版本之后,加密规则是caching_sha2_password。然而N
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-05
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/MarkDown/" class="post-category">
-                                    MarkDown
+                            <a href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    开发工具
                                 </a>
                             
                             
@@ -806,12 +774,12 @@ Connection connection = DriverManager.getConnection("j
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/MarkDown/">
-                        <span class="chip bg-color">MarkDown</span>
+                    <a href="/tags/MySQL/">
+                        <span class="chip bg-color">MySQL</span>
                     </a>
                     
-                    <a href="/tags/Test/">
-                        <span class="chip bg-color">Test</span>
+                    <a href="/tags/Navicat/">
+                        <span class="chip bg-color">Navicat</span>
                     </a>
                     
                 </div>
@@ -1179,7 +1147,8 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
-
+    <!--动态线条背景-->
+    <script type="text/javascript" color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
 </body>
 
 </html>
