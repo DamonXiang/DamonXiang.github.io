@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>maven添加Lombok依赖后@Data注解无效解决办法</title>
+      <link href="/posts/a26.html"/>
+      <url>/posts/a26.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><ul><li>1、确认已添加依赖：<br><img src="http://q5bt5gtqa.bkt.clouddn.com/20200224222826.png" alt=""></li><li>2、安装插件：<br><img src="http://q5bt5gtqa.bkt.clouddn.com/20200224223315.png" alt="安装插件"><br><img src="http://q5bt5gtqa.bkt.clouddn.com/20200224223526.png" alt="成功"></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> maven </tag>
+            
+            <tag> Lombok </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo-yilia主题使用问题总结</title>
       <link href="/posts/dd5c.html"/>
       <url>/posts/dd5c.html</url>
