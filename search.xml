@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>MySQL自增字段从1开始的设置方法</title>
+      <link href="/posts/84db.html"/>
+      <url>/posts/84db.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/DamonXiang/mrximgs/images/20200405140114.png" alt=""></p><p>即使清空表中数据，再添加记录时，id自增字段还是从上一次数据的id开始自增。</p><p>只需要执行<code>truncate table tablename</code>即可重置id，tablename替换为自己的表名。</p><p><img src="https://cdn.jsdelivr.net/gh/DamonXiang/mrximgs/images/20200405140535.png" alt=""></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ajax请求成功却进入error的解决方法</title>
       <link href="/posts/7e4a.html"/>
       <url>/posts/7e4a.html</url>

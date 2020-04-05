@@ -4,8 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="maven添加Lombok依赖后@Data注解无效解决办法, Mr.X’s blog">
-    <meta name="description" content="maven中引入了Lombok的依赖但在使用Lombok的@Data注解时并没有生成相应的getter/setter方法。其原因在于IDEA还需要安装Lombok插件。">
+    <meta name="keywords" content="MySQL自增字段从1开始的设置方法, Mr.X’s blog">
+    <meta name="description" content="
+即使清空表中数据，再添加记录时，id自增字段还是从上一次数据的id开始自增。
+只需要执行truncate table tablename即可重置id，tablename替换为自己的表名。
+
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>maven添加Lombok依赖后@Data注解无效解决办法 | Mr.X’s blog</title>
+    <title>MySQL自增字段从1开始的设置方法 | Mr.X’s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -242,12 +246,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/DamonXiang/mrximgs/images/20200405140114.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">maven添加Lombok依赖后@Data注解无效解决办法</h1>
+                    <h1 class="description center-align post-title">MySQL自增字段从1开始的设置方法</h1>
                 </div>
             </div>
         </div>
@@ -364,18 +368,23 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/maven/">
-                                <span class="chip bg-color">maven</span>
-                            </a>
-                        
-                            <a href="/tags/Lombok/">
-                                <span class="chip bg-color">Lombok</span>
+                            <a href="/tags/MySQL/">
+                                <span class="chip bg-color">MySQL</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                数据库
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -384,7 +393,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-24
+                    2020-04-05
                 </div>
                 
 
@@ -398,7 +407,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    17
+                    53
                 </div>
                 
 
@@ -421,10 +430,10 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><ul>
-<li><h2 id="1、确认已添加依赖："><a href="#1、确认已添加依赖：" class="headerlink" title="1、确认已添加依赖："></a>1、确认已添加依赖：</h2><img src="https://cdn.jsdelivr.net/gh/DamonXiang/mrximgs/images/20200224222826.png" alt=""></li>
-<li><h2 id="2、安装插件："><a href="#2、安装插件：" class="headerlink" title="2、安装插件："></a>2、安装插件：</h2><img src="https://cdn.jsdelivr.net/gh/DamonXiang/mrximgs/images/20200224223315.png" alt="安装插件"><br><img src="https://cdn.jsdelivr.net/gh/DamonXiang/mrximgs/images/20200224223526.png" alt="成功"></li>
-</ul>
+                <p><img src="https://cdn.jsdelivr.net/gh/DamonXiang/mrximgs/images/20200405140114.png" alt=""></p>
+<p>即使清空表中数据，再添加记录时，id自增字段还是从上一次数据的id开始自增。</p>
+<p>只需要执行<code>truncate table tablename</code>即可重置id，tablename替换为自己的表名。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/DamonXiang/mrximgs/images/20200405140535.png" alt=""></p>
 
             </div>
             <hr/>
@@ -450,7 +459,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://damonxiang.github.io/posts/a26.html">http://damonxiang.github.io/posts/a26.html</a>
+                    <a href="http://damonxiang.github.io/posts/84db.html">http://damonxiang.github.io/posts/84db.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -488,12 +497,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/maven/">
-                                    <span class="chip bg-color">maven</span>
-                                </a>
-                            
-                                <a href="/tags/Lombok/">
-                                    <span class="chip bg-color">Lombok</span>
+                                <a href="/tags/MySQL/">
+                                    <span class="chip bg-color">MySQL</span>
                                 </a>
                             
                         </div>
@@ -681,9 +686,63 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/posts/84db.html">
+                    <div class="card-image">
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/DamonXiang/mrximgs/images/20200405140114.png" class="responsive-img" alt="MySQL自增字段从1开始的设置方法">
+                        
+                        <span class="card-title">MySQL自增字段从1开始的设置方法</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+即使清空表中数据，再添加记录时，id自增字段还是从上一次数据的id开始自增。
+只需要执行truncate table tablename即可重置id，tablename替换为自己的表名。
+
+
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-05
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                    数据库
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/MySQL/">
+                        <span class="chip bg-color">MySQL</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/posts/7e4a.html">
                     <div class="card-image">
@@ -701,9 +760,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-07
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -725,59 +784,6 @@
                     
                     <a href="/tags/jQuery/">
                         <span class="chip bg-color">jQuery</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/dd5c.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Hexo-yilia主题使用问题总结">
-                        
-                        <span class="card-title">Hexo-yilia主题使用问题总结</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            利用hexo搭建好博客后，就可以自己设置主题了。常用的主题里yilia算是比较美观简洁的。于是开始倒腾yilia。在网上也找到了许多相关的教程但是都不够集中，甚至有一些小问题（某个博主的教程甚至导致我的主题配置文件损坏~~~只好重新配置）。于是自己进行一下小总结。
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-10
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/blog/" class="post-category">
-                                    blog
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
-                    </a>
-                    
-                    <a href="/tags/yilia/">
-                        <span class="chip bg-color">yilia</span>
                     </a>
                     
                 </div>
