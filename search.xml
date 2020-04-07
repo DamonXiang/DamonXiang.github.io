@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>PHPjson_encode函数使JSON数组中整型变为字符串的解决方法</title>
+      <link href="/posts/f931.html"/>
+      <url>/posts/f931.html</url>
+      
+        <content type="html"><![CDATA[<p>最近在用PHP写后端接口时,使用json_encode函数格式化关联数组，结果发现数组中的整型变为字符串，导致返回前端的JSON数据处理起来不够方便。</p><p><img src="https://cdn.jsdelivr.net/gh/DamonXiang/mrximgs/images/20200407120052.png" alt=""></p><p>网上查资料发现json_encode函数有第二个参数，可以修改JSON结果的输出格式。 </p><p><img src="https://cdn.jsdelivr.net/gh/DamonXiang/mrximgs/images/20200407120520.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/DamonXiang/mrximgs/images/1586232600353.png" alt=""></p><p>更多参数信息查看<a href="https://www.php.net/manual/zh/json.constants.php" target="_blank" rel="noopener">官方手册</a></p><p>加上<code>JSON_NUMERIC_CHECK</code>即可解决：</p><p><img src="https://cdn.jsdelivr.net/gh/DamonXiang/mrximgs/images/20200407121823.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/DamonXiang/mrximgs/images/20200407123249.png" alt=""></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> PHP </tag>
+            
+            <tag> JSON </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MySQL自增字段从1开始的设置方法</title>
       <link href="/posts/84db.html"/>
       <url>/posts/84db.html</url>
